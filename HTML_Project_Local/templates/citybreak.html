@@ -6,6 +6,8 @@
     <!--content="width=device-width 網頁內容跟隨螢幕寬度-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- ../static/citybreak.css：因為 citybreak.html 在 templates 資料夾中，
+    所以 ../ 表示返回上層資料夾，然后進入 static 來找到 CSS 文件。 -->
     <link rel="stylesheet" href="../static/citybreak.css" type="text/css"> 
     <title>CityBreak Outdoor Store</title>
     <!-- 引入 Font Awesome -->
@@ -104,13 +106,13 @@
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="/HTML_Project_Local/static/image/1_2.jpg" class="d-block w-100" alt="...">
+                <img src="../static/image/1_2.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="/HTML_Project_Local/static/image/1_3.jpg" class="d-block w-100" alt="...">
+                <img src="../static/image/1_3.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="/HTML_Project_Local/static/image/1_6.jpg" class="d-block w-100" alt="...">
+                <img src="../static/image/1_6.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -147,7 +149,7 @@
         <div class="row ">
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space" >         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/防水夾克1.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/防水夾克1.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">丈青色防水風衣</h5>
                     <p class="card-text">全天候防護，輕便舒適，適合各種戶外活動。</p>
@@ -158,7 +160,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/jacket2.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/jacket2.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">橘灰色防水風衣</h5>
                     <p class="card-text">全天候防護，輕便舒適，適合各種戶外活動。</p>
@@ -169,7 +171,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/shoe1.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/shoe1.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">藍色運動鞋</h5>
                     <p class="card-text">透氣舒適，穩定支撐，適合多種運動場景。</p>
@@ -180,7 +182,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/shoe6.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/shoe6.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">藍黑色運動鞋</h5>
                     <p class="card-text">舒適透氣，穩定支撐，適合多種運動場景。</p>
@@ -200,7 +202,7 @@
         <div class="row ">
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space" >         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/筆電包1.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/筆電包1.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">灰色筆電包</h5>
                     <p class="card-text">輕便防護，多隔層設計，完美保護您的科技設備。</p>
@@ -211,7 +213,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/筆電包2.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/筆電包2.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">黑色筆電包</h5>
                     <p class="card-text">輕便防護，多隔層設計，完美保護您的科技設備。</p>
@@ -222,7 +224,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/登山包4.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/登山包4.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">紅色登山包</h5>
                     <p class="card-text">大容量耐磨設計，適合長途探險，裝備隨行無憂。</p>
@@ -233,7 +235,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/登山包6.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/登山包6.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">藍色小登山包</h5>
                     <p class="card-text">輕便靈活，短途旅行與日常攜帶的理想選擇。</p>

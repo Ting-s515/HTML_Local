@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CityBreak Outdoor Store</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/HTML_Project_Local/static/General_cart.css" type="text/css"> 
+    <!-- ../static/citybreak.css：因為 citybreak.html 在 templates 資料夾中，
+    所以 ../ 表示返回上層資料夾，然后進入 static 來找到 CSS 文件。 -->
+    <link rel="stylesheet" href="../static/General_cart.css" type="text/css"> 
     <!-- 引入 Font Awesome -->
     <script src="https://kit.fontawesome.com/bdc270b58a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <script src="/HTML_Project_Local/static/General_cart.js"></script>
+    <script src="../static/General_cart.js"></script>
 </head>
 <body>
     <div class="logo-container">
@@ -104,7 +106,7 @@
         <div class="row ">
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space" >         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/down jacket1.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/down jacket1.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">白色羽絨外套</h5>
                     <p class="card-text">極致保暖，輕盈舒適，嚴寒天氣中的理想選擇。</p>
@@ -115,7 +117,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/down jacket2.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/down jacket2.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">綠色羽絨外套</h5>
                     <p class="card-text">極致保暖，輕盈舒適，嚴寒天氣中的理想選擇。</p>
@@ -126,7 +128,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/羽絨外套3.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/羽絨外套3.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">藍色羽絨外套</h5>
                     <p class="card-text">極致保暖，輕盈舒適，嚴寒天氣中的理想選擇。</p>
@@ -137,7 +139,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/jacket3.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/jacket3.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">紅色防水風衣</h5>
                     <p class="card-text">防風防雨，輕便透氣，適合各種戶外活動。</p>
@@ -148,7 +150,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/羊毛內搭衣1.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/羊毛內搭衣1.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">灰色羊毛內搭衣</h5>
                     <p class="card-text">柔軟保暖，貼身舒適，寒冷季節的最佳內搭。</p>
@@ -159,7 +161,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/羊毛內搭衣2.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/羊毛內搭衣2.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">黑色羊毛內搭衣</h5>
                     <p class="card-text">柔軟保暖，貼身舒適，寒冷季節的最佳內搭。</p>
@@ -170,7 +172,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/運動服男.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/運動服男.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">女運動服</h5>
                     <p class="card-text">舒適透氣，兼具運動與休閒風格，日常穿著必備。</p>
@@ -181,7 +183,7 @@
             </div>
             <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
                 <div class="card" style="width: 18rem;">
-                    <img src="/HTML_Project_Local/static/image/運動服女.jpg" class="card-img-top" alt="商品圖片">
+                    <img src="../static/image/運動服女.jpg" class="card-img-top" alt="商品圖片">
                     <div class="card-body">
                     <h5 class="card-title">男運動服</h5>
                     <p class="card-text">舒適透氣，兼具運動與休閒風格，日常穿著必備。</p>
