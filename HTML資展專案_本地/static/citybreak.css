@@ -1,0 +1,333 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+/* 父容器 */
+.logo-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* 使兩個區塊在同一高度對齊 */
+    width: 100%;
+    margin: 0 auto; /* 水平置中 */
+    padding: 10px 0; 
+    background-color: #D0D0D0;
+}
+.logo {
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: #D0D0D0;
+}
+
+.text_content {
+    color: #FF2D2D;
+    text-align: center;   
+}
+
+.city_break {
+   
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.logo_text {
+    font-size: 20px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+/* 會員icon與購物車icon */
+.member-container {
+    display: flex;
+    box-sizing: border-box;
+    font-size: 18px;
+    position: relative;
+    z-index: 3;
+    margin-right: 30px;
+    top: 30px;
+}
+/* 調整 icon 之間的間距 */
+.member-icon{
+    color: black;
+    padding: 10px;
+}
+.member-icon:hover{background-color:#9D9D9D;}
+.shoppingcart-icon{color:black; padding: 3px;}
+.shoppingcart-icon:hover{background-color:#9D9D9D;}
+
+/* 調整search icon  */
+/* .search-icon {
+    color: black;
+    padding: 10px;
+}
+.search-icon:hover {
+    background-color: #9D9D9D;
+}
+.search-container {
+    position: absolute;
+    top: 50px; 
+    right: 100px; 
+    z-index: 2;
+    width: 300px; 
+} */
+
+/* 導覽列父容器 */
+.navigation-container  {
+    background-color: #333;
+    padding: 0 ;
+    display: flex;
+    justify-content: center; 
+    position: relative;
+    z-index: 99;
+    width: 100%;
+}
+/* 導覽列子容器 */
+.navigation {
+    display: flex;
+    justify-content: center ; /* 設定第一層清單文字 */
+    align-items: center; 
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navigation ul {
+    list-style-type: none; /* 不顯示項目編號 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+li {position: relative;}
+/*設定文字欄位*/
+li a { 
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    width: 120px;
+    text-align: center;
+}
+/*設定第一層懸停*/
+li a:hover{background-color: #4F4F4F;}
+
+/* 設定第二層
+ul ul li a{text-align: left;} */
+/*設定第二層懸停*/
+/* ul ul li a:hover {  
+    background-color: 	#7B7B7B;
+} */
+/*設定第二層下拉菜單背景*/
+/* .navigation ul ul { 
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: 	#4F4F4F;
+    padding: 0;
+    font-size: 12px;
+}
+/* 顯示下拉菜單 */
+li:hover > ul {display: block;} */
+
+/* 調整第一層選單左右間距 */
+.navigation > ul > li {margin:0 10px;}
+
+@media(max-width:768px){
+    .logo{display: none;}
+    .navigation{display: none;}
+    .navigation-container{display: none;}
+    /* 手機漢堡icon */
+    .navbar-toggler {
+        order: -1; /* 將按鈕移動到第一位置 */
+        margin-right: 0; /* 清除默認的右邊距 */
+        margin-left: 10px; /* 添加一些左邊距 */
+        position: fixed; /* 固定位置 */
+        left: 10px;
+        top:10px;
+    }
+    /* 手機清單 */
+    .navbar-nav {
+        max-width: 300px; 
+    }
+    /* 手機版會員和購物車圖示 */
+    .d-md-none {
+        display: flex;
+        margin: 5px;
+        justify-content: flex-end;
+        font-size: 20px;
+    }
+    /* 圖示顏色 */
+    .sm-shoppingcart-icon{color: white;font-size: 18px;}  
+    .sm-member-icon{color: white;margin-right: 5px;font-size: 18px; }
+    .logo-container{display: none;}
+    /* 設定購物車數量 */
+    .cart-count {
+        color: white !important;
+        font-size: 12px;
+    }
+     /* 修改會員登入文字 */
+     .text-userlogin{
+        color: #D0D0D0 !important;
+        font-size: 16px !important;
+        position: relative !important;
+        top: 5px !important; 
+    }
+    /* 修改會員登出文字 */
+    .text-userout{
+        font-size: 16px !important;
+        position: relative !important;
+        top: 5px !important;
+    }   
+}
+
+@media(min-width:1025px){
+    .logo{display: block;}
+    .navbar {display: none;}
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* 在 768px 到 1023px 之間顯示的樣式設定 */
+    .navbar { display: none; }
+    .navigation > ul > li {
+        margin:0;}   
+}
+@media(max-width:992px){
+    .card-space {
+        flex: 0 0 50%; /* 讓卡片占滿一整行 */
+        max-width: 50%; /* 讓卡片最大寬度為 100% */
+        box-sizing: border-box;
+    }
+    .card {
+       width: 100%;
+    }
+    .card-container{
+        max-width: 700px !important;
+    }
+}
+/* 卡片區塊 */
+.card-container {
+    max-width: 1200px;
+    padding: 0 20px;
+}
+.card-img-top {
+    width: 100% ; 
+    max-height: 200px ;
+    object-fit: contain ;
+ }
+ /* 卡片組件設定 */
+.card-space{
+    margin-bottom:20px;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+/* 幻燈片 */
+.carousel-container {
+    width: 100%; /* 設定幻燈片寬度 */
+    max-width: 1200px;
+    background-color: #f8f9fa; /* 設定背景顏色 */
+    padding: 20px;
+    margin: auto;
+    margin-top: -10px;
+    z-index: 1;
+}
+.carousel-inner > img {
+    width: 100%;
+    height: auto;
+    max-height: auto;
+    object-fit: contain; /* 保持圖片比例，裁剪至區塊大小 */ 
+}
+/* 文字區塊 */
+.text-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height:80px; 
+    margin: 0 auto;
+}
+.text-container p {
+    font-size: 30px;
+    letter-spacing: 20px;
+    margin: 0 auto;
+    text-align: center; 
+}
+  /* 購物車清單視窗 */
+.cart-popup {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 60px;
+    width: 300px;
+    background-color: white;
+    z-index: 100;
+    padding: 10px;
+}
+.cart-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+.cart-popup-items {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.cart-popup-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.cart-popup-item + .cart-popup-item {
+    border-top: 1px solid black;
+}
+.cart-popup-footer {
+    margin-top: 15px;
+}
+
+/* 設置 badge 顏色 */
+.cart-count {
+    color: black; /* 設定文字顏色 */
+}
+/* 加入購物車按鈕 */
+.add-to-cart{
+    background-color: #FF5722; 
+    color: #FFFFFF; 
+    border: none; 
+}
+.add-to-cart:hover {
+    background-color: #E64A19; 
+}
+
+/* 修改會員登入文字 */
+.text-userlogin{
+    text-decoration: none ;
+    color: #4F4F4F ;
+    font-size: 18px ;
+    position: relative;
+    top: 10px;
+    margin-right: 5px;
+    text-decoration: underline;
+}
+/* 修改會員登出文字 */
+.text-userout{
+    color: #FF2D2D ;
+    text-decoration: underline;
+    font-size: 18px ;
+    position: relative;
+    top: 10px;
+    margin-right: 5px;
+}  
