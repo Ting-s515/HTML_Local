@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--RWD initial-scale=1.0 畫面縮放比例設定100%-->
+    <!--content="width=device-width 網頁內容跟隨螢幕寬度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/HTML_Project_Local/static/citybreak.css" type="text/css"> 
+    <title>CityBreak Outdoor Store</title>
+    <!-- 引入 Font Awesome -->
+    <script src="https://kit.fontawesome.com/bdc270b58a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="/HTML_Project_Local/static/General_cart.js"></script>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo">   
+            <a href="citybreak.html" class="text-decoration-none">
+                <div class="text_content">
+                    <div class="city_break">CITYBREAK OUTDOOR</div>
+                    <p class="logo_text">戶外休閒用品店</p>
+                </div> 
+            </a>   
+        </div>
+        <!-- 電腦購物車icon -->
+        <div class="member-container">
+            <a href="userLogin.html" class="text-decoration-none"><i class="fa-solid fa-user member-icon"></i>
+            </a>
+            <a href="#" class="text-decoration-none shoppingcart-icon"><i class="fa-solid fa-shopping-cart"></i>
+                <!-- badge更新圖示數量 -->
+                <span class="cart-count" class="badge bg-secondary">0</span>
+            </a>
+                <!-- 新增搜尋 icon -->
+                 <!-- <a hreSf="#" class="text-decoration-none search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>  -->
+        </div> 
+        <!-- <div class="container mt-3 search-container" style="display: none;"> 預設隱藏
+            <form id="searchForm">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="搜尋商品..." aria-label="Search">
+                    <button class="btn btn-primary" type="submit">搜尋</button>
+                </div>
+            </form>
+        </div>  -->
+    
+        <div id="searchResults" class="mt-4">
+            <!-- 搜尋結果將顯示在這裡 -->
+        </div>
+    </div>
+
+    <!-- 桌機導覽列 -->
+     <div class="navigation-container">
+        <nav class="navigation">
+            <ul><!-- 第一層 -->
+                <li><a href="clothes.html">衣褲鞋襪</a> </li> 
+                <li><a href="backpack.html">各類背包</a></li>
+                <li><a href="outdoor_litems.html">戶外生活</a></li>
+                <li><a href="equipment.html">器材裝備</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- 手機清單 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- navbar-expand：從垂直堆疊變成水平展開 bg-dark清單背景顏色 navbar-dark設定文字配色方案為深色背景和亮色文字-->
+        <div class="container ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <!-- 是 Bootstrap 中的內建類別。當這個類別應用到一個 <span> 元素上時，Bootstrap 會自動添加一個樣式，顯示為三條橫線的漢堡圖示 -->
+            </button>
+            <a class="navbar-brand mx-auto" href="citybreak.html" >CityBreak 戶外用品店</a>
+            <!-- mx-auto 是 Bootstrap 的一個 utility 類別，它是 margin-left: auto 和 margin-right: auto 的縮寫 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav"> 
+                    <!-- 這個類別會將列表樣式化為一個水平排列的導航欄 -->
+                    <!-- 第一層 -->
+                    <li class="nav-item">
+                        <!-- dropdown 是 Bootstrap 中用來為具有下拉選單功能的項目提供樣式和功能的類別。 --> 
+                        <a class="nav-link" href="clothes.html">衣褲鞋襪</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="backpack.html" >各類背包 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="outdoor_litems.html">戶外生活</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipment.html">器材裝備</a>
+                    </li>
+                </ul>
+                 <!-- 手機版會員和購物車圖示 -->
+                <div class="d-md-none ml-auto">
+                    <a href="userLogin.html" class="text-decoration-none me-2"><i class="fa-solid fa-user sm-member-icon"></i></a>
+                    <a href="#" class="text-decoration-none"><i class="fa-solid fa-shopping-cart sm-shoppingcart-icon"></i>
+                         <!-- badge更新圖示數量 -->
+                        <span class="cart-count" class="badge bg-secondary">0</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+     <!-- 圖片幻燈片 -->
+    <div class="carousel-container">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/HTML_Project_Local/static/image/1_2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/HTML_Project_Local/static/image/1_3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/HTML_Project_Local/static/image/1_6.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 網頁共用購物清單 -->
+    <div class="cart-popup" id="cart-popup">
+        <div class="cart-popup-header">
+            <h5>購物清單</h5>
+            <button class="close" id="close-cart-popup">&times;</button>
+            <button class="btn btn-danger" id="clear-cart">清除購物車</button>
+        </div>
+        <div class="cart-popup-items" id="cart-items"></div>
+        <div class="cart-popup-footer">
+            <strong>總價: NT$ <span id="cart-total">0</span></strong>
+            <button class="btn btn-primary btn-block mt-2">前往結帳</button>
+        </div>
+    </div>
+
+    <!-- 文字區塊 -->
+    <div class="text-container">
+        <p>最新商品</p>
+    </div>
+    <!-- 商品卡片區塊 -->
+    <div class="container card-container ">
+        <div class="row ">
+            <div class="col-6  col-lg-3 d-flex justify-content-center card-space" >         
+                <div class="card" style="width: 18rem;">
+                    <img src="/HTML_Project_Local/static/image/防水夾克1.jpg" class="card-img-top" alt="商品圖片">
+                    <div class="card-body">
+                    <h5 class="card-title">丈青色防水風衣</h5>
+                    <p class="card-text">全天候防護，輕便舒適，適合各種戶外活動。</p>
+                    <p class="card-text"><strong>NT$1299</strong></p> <!-- 價格 -->
+                    <a href="#" class="btn btn-primary add-to-cart">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
+                <div class="card" style="width: 18rem;">
+                    <img src="/HTML_Project_Local/static/image/jacket2.jpg" class="card-img-top" alt="商品圖片">
+                    <div class="card-body">
+                    <h5 class="card-title">橘灰色防水風衣</h5>
+                    <p class="card-text">全天候防護，輕便舒適，適合各種戶外活動。</p>
+                    <p class="card-text"><strong>NT$1299</strong></p> <!-- 價格 -->
+                    <a href="#" class="btn btn-primary add-to-cart">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
+                <div class="card" style="width: 18rem;">
+                    <img src="/HTML_Project_Local/static/image/shoe1.jpg" class="card-img-top" alt="商品圖片">
+                    <div class="card-body">
+                    <h5 class="card-title">藍色運動鞋</h5>
+                    <p class="card-text">透氣舒適，穩定支撐，適合多種運動場景。</p>
+                    <p class="card-text"><strong>NT$1500</strong></p> <!-- 價格 -->
+                    <a href="#" class="btn btn-primary add-to-cart">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
+                <div class="card" style="width: 18rem;">
+                    <img src="/HTML_Project_Local/static/image/shoe6.jpg" class="card-img-top" alt="商品圖片">
+                    <div class="card-body">
+                    <h5 class="card-title">藍黑色運動鞋</h5>
+                    <p class="card-text">舒適透氣，穩定支撐，適合多種運動場景。</p>
+                    <p class="card-text"><strong>NT$1500</strong></p> <!-- 價格 -->
+                    <a href="#" class="btn btn-primary add-to-cart">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-container">
+        <p>推薦商品</p>
+    </div>
+    <!-- 商品卡片區塊 -->
+    <div class="container card-container ">
+        <div class="row ">
+            <div class="col-6  col-lg-3 d-flex justify-content-center card-space" >         
+                <div class="card" style="width: 18rem;">
+                    <img src="/HTML_Project_Local/static/image/筆電包1.jpg" class="card-img-top" alt="商品圖片">
+                    <div class="card-body">
+                    <h5 class="card-title">灰色筆電包</h5>
+                    <p class="card-text">輕便防護，多隔層設計，完美保護您的科技設備。</p>
+                    <p class="card-text"><strong>NT$ 800</strong></p> <!-- 價格 -->
+                    <a href="#" class="btn btn-primary add-to-cart">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
+                <div class="card" style="width: 18rem;">
+                    <img src="/HTML_Project_Local/static/image/筆電包2.jpg" class="card-img-top" alt="商品圖片">
+                    <div class="card-body">
+                    <h5 class="card-title">黑色筆電包</h5>
+                    <p class="card-text">輕便防護，多隔層設計，完美保護您的科技設備。</p>
+                    <p class="card-text"><strong>NT$ 800</strong></p> <!-- 價格 -->
+                    <a href="#" class="btn btn-primary add-to-cart">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
+                <div class="card" style="width: 18rem;">
+                    <img src="/HTML_Project_Local/static/image/登山包4.jpg" class="card-img-top" alt="商品圖片">
+                    <div class="card-body">
+                    <h5 class="card-title">紅色登山包</h5>
+                    <p class="card-text">大容量耐磨設計，適合長途探險，裝備隨行無憂。</p>
+                    <p class="card-text"><strong>NT$ 1100</strong></p> <!-- 價格 -->
+                    <a href="#" class="btn btn-primary add-to-cart">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6  col-lg-3 d-flex justify-content-center card-space">         
+                <div class="card" style="width: 18rem;">
+                    <img src="/HTML_Project_Local/static/image/登山包6.jpg" class="card-img-top" alt="商品圖片">
+                    <div class="card-body">
+                    <h5 class="card-title">藍色小登山包</h5>
+                    <p class="card-text">輕便靈活，短途旅行與日常攜帶的理想選擇。</p>
+                    <p class="card-text"><strong>NT$ 900</strong></p> <!-- 價格 -->
+                    <a href="#" class="btn btn-primary add-to-cart">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+    
+</body>
+</html>
