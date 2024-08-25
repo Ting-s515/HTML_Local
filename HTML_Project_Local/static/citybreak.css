@@ -58,22 +58,6 @@ body {
 .shoppingcart-icon{color:black; padding: 3px;}
 .shoppingcart-icon:hover{background-color:#9D9D9D;}
 
-/* 調整search icon  */
-/* .search-icon {
-    color: black;
-    padding: 10px;
-}
-.search-icon:hover {
-    background-color: #9D9D9D;
-}
-.search-container {
-    position: absolute;
-    top: 50px; 
-    right: 100px; 
-    z-index: 2;
-    width: 300px; 
-} */
-
 /* 導覽列父容器 */
 .navigation-container  {
     background-color: #333;
@@ -87,12 +71,32 @@ body {
 /* 導覽列子容器 */
 .navigation {
     display: flex;
-    justify-content: center ; /* 設定第一層清單文字 */
+    justify-content: space-around ; /* 設定第一層清單文字 */
     align-items: center; 
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
+/* 搜尋框容器 */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+/* 搜尋框樣式 */
+.search-col {
+    padding: 5px;
+    width: 150px;
+    margin-right: 30px;
+    height: 35px;
+}
+.search-btn {
+    border: none;
+    color: white;
+    padding: 5px; 
+    font-size: 16px; 
+}
+.search-btn:hover {
+    background-color: #9D9D9D ; }
 
 .navigation ul {
     list-style-type: none; /* 不顯示項目編號 */
@@ -154,6 +158,27 @@ li:hover > ul {display: block;} */
     .navbar-nav {
         max-width: 300px; 
     }
+    /* 手機版搜尋框容器 */
+    .sm-search-form {
+        display: flex;
+        align-items: center;
+        margin:0; 
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+    .sm-search-col{
+        padding: 5px;
+        width: 150px;
+        height: 35px;
+    }
+    .sm-search-btn{
+        color: white;
+        padding: 5px;
+        border: none;
+        margin-left: 5px;
+    }
+    .sm-search-btn:hover{
+       background-color: #9D9D9D;}
     /* 手機版會員和購物車圖示 */
     .d-md-none {
         display: flex;
