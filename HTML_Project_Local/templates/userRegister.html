@@ -7,61 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-     <!-- 引入fontawesome -->
     <script src="https://kit.fontawesome.com/bdc270b58a.js" crossorigin="anonymous"></script>  
-    <style>
-        body {
-            margin: 0 0 0;
-            padding: 0;
-        }
-        .border {
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            }
-            /* 父容器 */
-        .logo-container {
-            display: flex;
-            justify-content: center; 
-            align-items: center; /* 使兩個區塊在同一高度對齊 */
-            width: 100%;
-            margin: 0 auto; /* 水平置中 */
-            padding: 10px 0; 
-            background-color: #D0D0D0;
-        }
-        .logo {
-            padding: 10px;
-            margin: 0 auto;
-            display: flex;
-            justify-content:center; 
-            align-items: center;
-            background-color: #D0D0D0;
-        }
-        /* 設定戶外休閒用品 */
-        .text_content {
-            color: 	#FF2D2D;  
-            text-align: center; /* 文字左對齊 */
-        }
-        .city_break {
-            font-size: 25px;
-            font-weight: bold;
-            margin: 0; /* 去除默認的邊距 */
-            letter-spacing: 1px;
-        }
-        .logo_text {
-            font-size: 20px;
-            margin: 0; 
-            letter-spacing: 2px; /* 調整字母間距 */
-        }
-        a.text-decoration-none {
-            display: flex; /* 確保連結範圍只限於子容器內部內容 */
-            align-items: center; /* 圖標與文字垂直對齊 */
-        }  
-        .user-container{
-            margin-left: 20px;
-            margin-right: 20px;
-        } 
-
+    <link rel="stylesheet" href="../static/general_icon.css" type="text/css"> 
+   
     </style>
 </head>
 <body>
@@ -89,11 +37,12 @@
                 </div>
                 <div class="mb-4">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" required style="height: 40px;">
+                    <input type="password" class="form-control" id="password" name="password" required style="height: 40px;"
+                    placeholder="至少8碼，且包含一个大寫字母">
                 </div>
                 <div class="mb-4">
                     <label for="phone" class="form-label">手機號碼</label>
-                    <input type="text" class="form-control" id="phone" name="phone" required style="height: 40px;">
+                    <input type="tel" class="form-control" id="phone" name="phone" required style="height: 40px;">
                 </div>
                 <button type="submit" class="btn btn-primary w-100">註冊</button>
             </form>
@@ -109,11 +58,38 @@
         //3.fetch 
         document.getElementById('registerForm').addEventListener("submit",
         function(event){event.preventDefault(); // 防止表單默認提交行為
-        let data={
-            name:document.getElementById('name').value,
-            email:document.getElementById('email').value,
-            password:document.getElementById('password').value,
-            phone:document.getElementById('phone').value
+            let name=document.getElementById('name').value;
+        let email=document.getElementById('email').value;
+        let password=document.getElementById('password').value;
+        let phone=document.getElementById('phone').value;
+        // 在 JavaScript 中，正規表示式寫在 / 和 / 之間。
+        let phoneRegex = /^\d{10}$/; // 驗證號碼
+        let passwordRegex = /^(?=.*[A-Z]).{8,}$/;
+        //?=正向前瞻斷言: 大寫字母的位置無關緊要，只要符合條件即可。
+        // {8,} 表示匹配 至少 8 个字符
+        // {8} 表示匹配 正好 8 个字符
+        let emailRegex = /^\w{1,63}@[a-zA-Z0-9]{2,63}\.[a-zA-Z]{2,63}(\.[a-zA-Z]{2,63})?$/;
+        if (!name || !email || !password || !phone) {
+            alert('所有字段都是必填的。');
+            return; // 阻止提交表單
+        }
+        if (!phoneRegex.test(phone)) {
+            alert('手機號碼格式錯誤，請重新輸入。');
+            return; 
+        }
+        if (!emailRegex.test(email)) {
+            alert('email格式錯誤，請重新輸入。');
+            return;
+        }
+        if (!passwordRegex.test(password)) {
+            alert('密碼至少8碼，且包含一个大寫字母。');
+            return;
+        }
+        let data = {
+            name: name,
+            email: email,
+            password: password,
+            phone: phone
         };
         //向 Flask 伺服器發送一個請求
         fetch('/userRegister',{
@@ -125,7 +101,7 @@
         })
         .then(response => response.json())
         .then(data => {
-            if (data.status === 'success') {
+            if (data.status === 'success') {//data的屬性status
                     alert('註冊成功');
                     window.location.href = '/citybreak'
                 } else {
