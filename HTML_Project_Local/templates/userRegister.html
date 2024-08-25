@@ -42,7 +42,8 @@
                 </div>
                 <div class="mb-4">
                     <label for="phone" class="form-label">手機號碼</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" required style="height: 40px;">
+                    <input type="tel" class="form-control" id="phone" name="phone" required style="height: 40px;"
+                    placeholder="+886">
                 </div>
                 <button type="submit" class="btn btn-primary w-100">註冊</button>
             </form>
@@ -63,7 +64,7 @@
         let password=document.getElementById('password').value;
         let phone=document.getElementById('phone').value;
         // 在 JavaScript 中，正規表示式寫在 / 和 / 之間。
-        let phoneRegex = /^\d{10}$/; // 驗證號碼
+        let phoneRegex = /^09\d{8}$/; // 驗證號碼
         let passwordRegex = /^(?=.*[A-Z]).{8,}$/;
         //?=正向前瞻斷言: 大寫字母的位置無關緊要，只要符合條件即可。
         // {8,} 表示匹配 至少 8 个字符
