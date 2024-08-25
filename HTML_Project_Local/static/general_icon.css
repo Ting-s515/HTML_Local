@@ -1,0 +1,51 @@
+.border {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    }
+body {
+    margin: 0 0 0;
+    padding: 0;
+}
+/* 父容器 */
+.logo-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* 使兩個區塊在同一高度對齊 */
+    width: 100%;
+    margin: 0 auto; /* 水平置中 */
+    padding: 10px 0; 
+    background-color: #D0D0D0;
+}
+.logo {
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:center; 
+    align-items: center;
+    background-color: #D0D0D0;
+}
+/* 設定戶外休閒用品 */
+.text_content {
+    color: 	#FF2D2D;  
+    text-align: center; /* 文字左對齊 */
+}
+.city_break {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0; /* 去除默認的邊距 */
+    letter-spacing: 1px;
+}
+.logo_text {
+    font-size: 20px;
+    margin: 0; 
+    letter-spacing: 2px; /* 調整字母間距 */
+}
+a.text-decoration-none {
+    display: flex; /* 確保連結範圍只限於子容器內部內容 */
+    align-items: center; /* 圖標與文字垂直對齊 */
+}   
+.user-container{
+    margin-left: 20px;
+    margin-right: 20px;
+}
